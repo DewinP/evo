@@ -22,7 +22,7 @@ export default function RootLayout({
       <ClerkProvider>
         <body
           className={cn(
-            "bg-background min-h-screen font-sans antialiased",
+            "min-h-screen bg-background font-sans antialiased",
             GeistSans.variable,
           )}
         >
@@ -33,7 +33,9 @@ export default function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
-              {children}
+              <div className="flex min-h-screen w-full flex-col">
+                {children}
+              </div>
             </ThemeProvider>
           </TRPCReactProvider>
         </body>
